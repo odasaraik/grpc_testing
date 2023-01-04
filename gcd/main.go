@@ -17,11 +17,9 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to listen: %v", err)
 	}
-
 	s := grpc.NewServer()
 	pb.RegisterGCDServiceServer(s, &server{})
 	reflection.Register(s)
-
 	if err := s.Serve(lis); err != nil {
 		log.Fatalf("Failed to serve: %v", err)
 	}
