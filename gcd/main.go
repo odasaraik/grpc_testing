@@ -4,7 +4,7 @@ import (
 	"log"
 	"net"
 
-	"github.com/odasaaik/grpc_testing/pb"
+	"github.com/odasaraik/grpc_testing/pb"
 	context "golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
