@@ -1,6 +1,7 @@
 FROM golang:1.19.4
 
-WORKDIR /go/src/github.com/odasaraik/grpc_testing/api
+WORKDIR /go/src/github.com/odasaraik/grpc_testing
+
 COPY go.mod ./
 COPY go.sum ./
 COPY api .
