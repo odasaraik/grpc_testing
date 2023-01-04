@@ -1,0 +1,18 @@
+FROM golang:1.19.4
+
+WORKDIR /go/src/github.com/odasaraik/grpc_testing/api
+COPY go.mod ./
+COPY go.sum ./
+COPY api .
+COPY pb ../pb
+
+#ENV PATH="/usr/local/newdir:${PATH}"
+#ENV PATH = "C:\Clouda\testgRPC:${PATH}}"
+#ENV PATH="/C:/Clouda/testgRPC/api:${PATH}"
+
+RUN go get -v ./...
+RUN go install -v ./...
+
+EXPOSE 3001
+
+CMD [ "./api" ]
