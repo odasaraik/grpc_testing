@@ -9,6 +9,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/odasaraik/grpc_testing/pb"
 
+	//"github.com/odasaraik/grpc_testing/tree/main/pb"
+
 	"google.golang.org/grpc"
 )
 
